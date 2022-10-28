@@ -1,8 +1,0 @@
-# 获取语雀用户的仓库列表
-GET https://www.yuque.com/api/v2/hello
-Accept: application/json
-User-Agent: siyuan-note
-X-Auth-Token: {{yuqueToken}}
-
-
-
