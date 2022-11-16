@@ -45,10 +45,4 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Run Build 🏗
-        run: pnpm run build
-
-#      - name: Run tests 🧪
-#        run: pnpm run test
+        run: pnpm install && pnpm run build
