@@ -12,12 +12,12 @@ on:
 
 jobs:
   ci:
+    runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
         os: [ ubuntu-latest ]
         node: [ 16 ]
-
-    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout 🛎
