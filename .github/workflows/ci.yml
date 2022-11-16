@@ -45,4 +45,4 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install && pnpm run build
+        run: pnpm i --shamefully-hoist && pnpm run build
