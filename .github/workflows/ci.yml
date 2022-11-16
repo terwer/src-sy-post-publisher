@@ -11,7 +11,7 @@ on:
       - dev
 
 jobs:
-  cache-and-install:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -44,5 +44,5 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
+      - name: Install dependencies and build for production
         run: pnpm i --shamefully-hoist && pnpm run build
