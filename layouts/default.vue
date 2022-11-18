@@ -1,16 +1,12 @@
 <template>
   <div>
     <Header/>
-    <slot />
+    <slot/>
     <Footer/>
   </div>
 </template>
 
-<script lang="ts">
-import Header from "~/components/default/Header.vue";
-import Footer from "~/components/default/Footer.vue";
-
-export default {
-  components: {Footer, Header}
-}
+<script lang="ts" setup>
+import Header from "~/components/common/Header.vue";
+import Footer from "~/components/common/Footer.vue";
 </script>

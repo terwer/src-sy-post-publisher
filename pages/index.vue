@@ -1,24 +1,9 @@
 <template>
   <div>
-    <div>Index</div>
-    <div>
-      <NuxtLink to="/detail">detail</NuxtLink>
-    </div>
-    <div>
-      <NuxtLink to="/publish">publish</NuxtLink>
-    </div>
+    <BlogIndex/>
   </div>
 </template>
 
 <script lang="ts" setup>
+import BlogIndex from "~/components/blog/BlogIndex.vue";
 </script>
-
-<script lang="ts">
-export default {
-  name: "index"
-}
-</script>
-
-<style scoped>
-
-</style>

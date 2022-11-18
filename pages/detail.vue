@@ -1,13 +1,9 @@
 <template>
-
+  <div>
+    <DetailIndex/>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "detail"
-}
+<script lang="ts" setup>
+import DetailIndex from "~/components/detail/DetailIndex.vue";
 </script>
-
-<style scoped>
-
-</style>

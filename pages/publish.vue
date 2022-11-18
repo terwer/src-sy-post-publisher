@@ -1,13 +1,9 @@
 <template>
-
+  <div>
+    <PublishIndex/>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "publish"
-}
+<script lang="ts" setup>
+import PublishIndex from "~/components/publish/PublishIndex.vue";
 </script>
-
-<style scoped>
-
-</style>
