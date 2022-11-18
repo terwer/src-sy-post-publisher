@@ -1,14 +1,19 @@
 # Nuxt 3 Minimal Starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# pnpm
 pnpm install --shamefully-hoist
+```
+
+If you set `--shamefully-hoist=true` in your `.npmrc` file, you can simplely use
+
+```bash
+pnpm install
 ```
 
 ## Development Server
@@ -33,4 +38,4 @@ Locally preview production build:
 pnpm run preview
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
