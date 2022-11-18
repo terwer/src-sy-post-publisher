@@ -3,7 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-logUtil.logInfo("测试日志写入")
+const env = useRuntimeConfig()
+logUtil(env.logLevel).logInfo("测试日志写入")
 </script>
 
 <style scoped>

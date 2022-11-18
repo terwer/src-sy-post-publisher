@@ -1,63 +1,77 @@
-// 开发阶段开启所有日志
-// 发布阶段只开启WARN和ERROR日志
+export const LOG_CONSTANTS = {
+    INFO: "info",
+    WARN: "warn",
+    ERROR: "error"
+}
 
-const LOG_INFO_ENABLED = true
-const LOG_WARN_ENABLED = true
-const LOG_ERROR_ENABLED = true
+class LogFactory {
+    private readonly loglevel: String;
 
-/**
- * 信息日志
- * @param msg 信息
- * @param param 参数
- */
-const logInfo = (msg: any, param?: any) => {
-    if (LOG_INFO_ENABLED) {
-        if (param) {
-            console.log(msg)
-            console.log(param)
-        } else {
-            console.log(msg)
+    constructor(loglevel: String) {
+        this.loglevel = loglevel;
+    }
+
+    /**
+     * 信息日志
+     * @param msg 信息
+     * @param param 参数
+     */
+    public logInfo = (msg: any, param?: any) => {
+        const LOG_INFO_ENABLED = this.loglevel == LOG_CONSTANTS.INFO
+        if (LOG_INFO_ENABLED) {
+            if (param) {
+                console.log(msg, param)
+            } else {
+                console.log(msg)
+            }
+        }
+    }
+    /**
+     * 警告日志
+     * @param msg 警告信息
+     * @param param 参数
+     */
+    public logWarn = (msg: any, param?: any) => {
+        const LOG_WARN_ENABLED = (this.loglevel == LOG_CONSTANTS.INFO || this.loglevel == LOG_CONSTANTS.WARN)
+        if (LOG_WARN_ENABLED) {
+            if (param) {
+                console.warn(msg, param)
+            } else {
+                console.warn(msg)
+            }
+        }
+    }
+    /**
+     * 错误日志
+     * @param msg 错误信息
+     * @param param 参数
+     */
+
+    public logError = (msg: any, param?: any) => {
+        const LOG_ERROR_ENABLED = (this.loglevel == LOG_CONSTANTS.INFO || this.loglevel == LOG_CONSTANTS.WARN || this.loglevel == LOG_CONSTANTS.ERROR)
+        if (LOG_ERROR_ENABLED) {
+            if (param) {
+                console.error(msg, param)
+            } else {
+                console.error(msg)
+            }
         }
     }
 }
-/**
- * 警告日志
- * @param msg 警告信息
- * @param param 参数
- */
-const logWarn = (msg: any, param?: any) => {
-    if (LOG_WARN_ENABLED) {
-        if (param) {
-            console.warn(msg)
-            console.warn(param)
-        } else {
-            console.warn(msg)
-        }
-    }
-}
-/**
- * 错误日志
- * @param msg 错误信息
- * @param param 参数
- */
-const logError = (msg: any, param?: any) => {
-    if (LOG_ERROR_ENABLED) {
-        if (param) {
-            console.error(msg)
-            console.error(param)
-        } else {
-            console.error(msg)
-        }
-    }
-}
+
 
 /**
  * 日志记录
  */
-const logUtil = {
-    logInfo,
-    logWarn,
-    logError
+const logUtil = (loglevel: String): LogFactory => {
+    return new LogFactory(loglevel)
 }
+
+/**
+ * info日志记录（忽视配置，强制打印info日志，不建议）
+ */
+// const logInfoUtil = (): LogFactory => {
+//     return logUtil(LOG_CONSTANTS.INFO)
+// }
 
 export default logUtil

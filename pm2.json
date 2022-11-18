@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "sy-post-publisher",
+      "script": "pnpm run dev",
+      "args" : "",
+      "instances": 1,
+      "exec_mode": "cluster"
+    }
+  ]
+}
