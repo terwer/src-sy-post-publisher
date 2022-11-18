@@ -1,12 +1,9 @@
 @import "./webfont";
-@import "./style.dark";
 
 :root {
   --g-font-family: "JetBrains Mono", "LXGW WenKai", "-apple-system", "Wenquanyi Micro Hei", "Wenquanyi Micro Hei Mono", "Microsoft YaHei", "PT Sans", "Liberation Mono", monospace, dejavu sans mono, Fira Code, Microsoft Yahei, Consolas, Courier New, monospace, Menlo, Monaco;
   font-family: var(--g-font-family) !important;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +13,7 @@
 }
 
 /* Mono font (optional) */
-pre,code {
+pre, code {
   font-family: var(--g-font-family) !important;
   tab-size: 4;
 }
@@ -26,8 +23,15 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
+}
+
+#__nuxt {
+  background: var(--custom-app-bg-color);
+  padding: 10px;
+  min-height: 940px;
 }
 
 body {
@@ -35,20 +39,8 @@ body {
   font-size: 100%;
 }
 
-html{
-  --custom-app-bg-color: #ffffff;
-}
-
-#app{
-  background: var(--custom-app-bg-color);
-  padding: 10px;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+.el-header {
+  height: 20px !important;
 }
 
 .el-tag {
@@ -56,10 +48,10 @@ html{
   margin-bottom: 10px;
 }
 
-.top-version-tip {
-  margin: 10px 0 !important;
-}
-
 .el-alert {
   margin-top: 10px !important;
+}
+
+.top-version-tip {
+  margin: 10px 0 !important;
 }
