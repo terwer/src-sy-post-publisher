@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 useHead({
   link: [
-    {rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico'},
+    {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
   ]
 })
 </script>
