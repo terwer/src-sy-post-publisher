@@ -2,12 +2,8 @@
   <div>Footer</div>
 </template>
 
-<script lang="ts">
-export default {
-  name: "Footer"
-}
+<script lang="ts" setup>
 </script>
 
 <style scoped>
-
 </style>

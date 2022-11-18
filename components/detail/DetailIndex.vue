@@ -6,12 +6,6 @@
 
 </script>
 
-<script lang="ts">
-export default {
-  name: "DetailIndex"
-}
-</script>
-
 <style scoped>
 
 </style>

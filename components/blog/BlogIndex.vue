@@ -1,15 +1,9 @@
 <template>
-  <div>BlogIndex</div>
+  <div>BlogIndex auto</div>
 </template>
 
 <script lang="ts" setup>
-
-</script>
-
-<script lang="ts">
-export default {
-  name: "BlogIndex"
-}
+logUtil.logInfo("测试日志写入")
 </script>
 
 <style scoped>
