@@ -1,5 +1,5 @@
 {
-  "name": "思源笔记发布辅助工具",
+  "name": "开发版 - 思源笔记发布辅助工具",
   "version": "1.0.0",
   "manifest_version": 3,
   "author": "terwer",
@@ -13,6 +13,9 @@
   "web_accessible_resources": [
     {
       "resources": [
+        "blog/index.html",
+        "detail/index.html",
+        "publish/index.html",
         "index.html"
       ],
       "matches": [
@@ -20,7 +23,10 @@
       ]
     }
   ],
+  "content_security_policy": {
+    "extension_page":"script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "blog/index.html"
   }
 }
