@@ -124,10 +124,21 @@ pnpm run wighet
 
 压缩 `dist` 文件夹为 `.zip`, 上架思源笔记挂件集市。
 
-### 方式 2、部署到 Google Chrome 浏览器插件
+### ~~方式 2、部署到浏览器插件~~
+
+注意：由于CSP策略问题，浏览器插件暂时不能正常工作
+
+参考 [Chrome extension minifist v3 not working](https://github.com/nuxt/framework/issues/9184)
+
+#### Google Chrome 或者 Edge
 
 ```bash
-pnpm run extension
+pnpm run extChrome
+```
+
+### Firefox
+```bash
+pnpm run extFirefox
 ```
 
 将密钥文件更名为 `key.pem` 复制到压缩 `extension/chrome`， 将`extension/chrome` 文件夹打包为 `zip`, 上架 Google Chrome

@@ -3,7 +3,7 @@
     <div>
       <span class="text"> &copy;2011-2022 </span>
       <span class="s-dark" @click="goGithub()"> sy-post-publisher </span>
-      <span class="text"> v0.0.3. </span>
+      <span class="text"> v1.0.0. </span>
       <span class="text s-dark" @click="toggleDark()">{{
           isDark ? $t('theme.mode.light') : $t('theme.mode.dark')
         }}</span>
@@ -23,7 +23,7 @@ const goGithub = () => {
   window.open("https://github.com/terwer/src-sy-post-publisher")
 }
 const newWin = () => {
-  goToPage("/blog/index.html")
+  goToPage("/blog")
 }
 </script>
 

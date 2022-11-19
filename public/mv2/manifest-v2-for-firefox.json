@@ -1,0 +1,25 @@
+{
+  "name": "开发版 - 思源笔记发布辅助工具",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "author": "terwer",
+  "description": "思源笔记发布辅助工具，支持博客式只读浏览，多平台文章发布。",
+  "applications": {
+    "gecko": {
+      "id": "terwer@terwer.space",
+      "strict_min_version": "47.0"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "blog/index.html",
+    "detail/index.html",
+    "publish/index.html",
+    "index.html"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}

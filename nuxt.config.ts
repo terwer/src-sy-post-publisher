@@ -1,8 +1,11 @@
 import ElementPlus from 'unplugin-element-plus/vite'
 
+const isSiyuanBuild = process.env.BUILD_TYPE == "siyuan"
+console.log("isSiyuanBuild=>", isSiyuanBuild)
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    ssr: true,
+    ssr: false,
 
     // nitro
     nitro: {
@@ -17,11 +20,11 @@ export default defineNuxtConfig({
 
     // vite
     vite: {
-        base: "./",
         plugins: [ElementPlus()],
     },
 
     app: {
+        baseURL: isSiyuanBuild ? '/widgets/sy-post-publisher/' : "/",
         // 静态资源路径
         buildAssetsDir: "/static/"
     },

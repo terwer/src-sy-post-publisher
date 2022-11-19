@@ -4,8 +4,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "build-siyuan": "BUILD_TYPE=siyuan nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "widget": "bash scripts/widget.sh",
+    "extChrome": "bash scripts/ext.sh",
+    "extFirefox": "bash scripts/extFV2.sh"
   },
   "devDependencies": {
     "@vueuse/nuxt": "^9.5.0",
