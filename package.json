@@ -1,33 +1,22 @@
 {
+  "name": "src-sy-post-publisher",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "build-siyuan": "BUILD_TYPE=siyuan nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "widget": "bash scripts/widget.sh",
-    "extChrome": "bash scripts/ext.sh",
-    "extFirefox": "bash scripts/extFV2.sh"
-  },
-  "devDependencies": {
-    "@vueuse/nuxt": "^9.5.0",
-    "nuxt": "3.0.0",
-    "sass": "^1.56.1",
-    "unplugin-element-plus": "^0.4.1",
-    "vue-i18n": "^9.2.2"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.0.10",
-    "element-plus": "^2.2.22",
-    "vue": "^3.2.45"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "webpack"
-      ]
-    }
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
+    "next": "13.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.3"
   }
 }
